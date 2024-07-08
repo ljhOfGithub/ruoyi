@@ -1,8 +1,13 @@
 package com.ruoyi.project.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.ruoyi.project.domain.ProjectBasicInfo;
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
 
-public interface ProjectBasicInfoMapper {
+
+@Mapper
+public interface ProjectBasicInfoMapper extends BaseMapper<ProjectBasicInfo> {
     /**
      * 根据项目 id 查询项目基础信息
      * @param id

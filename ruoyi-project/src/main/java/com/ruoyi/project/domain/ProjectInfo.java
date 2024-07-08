@@ -1,11 +1,12 @@
 package com.ruoyi.project.domain;
-
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.*;
 
 @Builder
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@TableName("sys_project_info")
 public class ProjectInfo {
 
     private String id;

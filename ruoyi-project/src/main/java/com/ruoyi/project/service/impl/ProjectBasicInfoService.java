@@ -5,11 +5,16 @@ import com.ruoyi.project.domain.ProjectInfo;
 import com.ruoyi.project.mapper.ProjectBasicInfoMapper;
 import com.ruoyi.project.mapper.ProjectInfoMapper;
 import com.ruoyi.project.service.IProjectBasicInfoService;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-@RequiredArgsConstructor
+@Service
 public class ProjectBasicInfoService implements IProjectBasicInfoService {
-    private final ProjectBasicInfoMapper projectBasicInfoMapper;
+    @Autowired
+    private ProjectBasicInfoMapper projectBasicInfoMapper;
 
     @Override
     public ProjectBasicInfo selectProjectBasicInfoById(Long id) {

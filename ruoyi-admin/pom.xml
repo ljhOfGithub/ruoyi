@@ -61,6 +61,16 @@
             <artifactId>ruoyi-generator</artifactId>
         </dependency>
 
+        <!-- 项目管理-->
+        <dependency>
+            <groupId>com.ruoyi</groupId>
+            <artifactId>ruoyi-project</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

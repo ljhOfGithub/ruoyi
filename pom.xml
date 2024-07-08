@@ -182,6 +182,13 @@
                 <version>${ruoyi.version}</version>
             </dependency>
 
+            <!-- 项目管理-->
+            <dependency>
+                <groupId>com.ruoyi</groupId>
+                <artifactId>ruoyi-project</artifactId>
+                <version>${ruoyi.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 

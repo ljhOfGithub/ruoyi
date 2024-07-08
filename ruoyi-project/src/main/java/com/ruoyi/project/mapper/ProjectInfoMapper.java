@@ -13,10 +13,8 @@ public interface ProjectInfoMapper extends BaseMapper<ProjectInfo> {
      * @param id
      * @return
      */
-    public ProjectInfo selectProjectInfoByProjectId(Long id);
-
-    public int updateProjectInfoByProject(ProjectInfo projectInfo);
-
-
+//    ProjectInfo selectProjectInfoByProjectId(Long id);
+//
+//    int updateProjectInfoByProject(ProjectInfo projectInfo);
 
 }

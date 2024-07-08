@@ -1,6 +1,8 @@
 package com.ruoyi.project.service;
 
 import com.ruoyi.project.domain.ProjectInfo;
+import com.ruoyi.project.dto.ProjectInfoReqDTO;
+import com.ruoyi.project.dto.ProjectInfoRespDTO;
 
 import java.util.List;
 
@@ -10,10 +12,12 @@ public interface IProjectInfoService {
      * @param id
      * @return
      */
-    ProjectInfo selectProjectInfoById(Long id);
+    ProjectInfoRespDTO selectProjectInfoById(Long id);
 
     int updateProjectInfo(ProjectInfo projectInfo);
 
     List<ProjectInfo> listProjectInfo();
+
+    ProjectInfoRespDTO getProjectBasicInfoDetail(ProjectInfoReqDTO projectInfoReqDTO);
 
 }

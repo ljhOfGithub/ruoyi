@@ -1,11 +1,15 @@
 package com.ruoyi.web.controller.project;
 
 import com.ruoyi.project.domain.ProjectInfo;
+import com.ruoyi.project.dto.ProjectInfoReqDTO;
+import com.ruoyi.project.dto.ProjectInfoRespDTO;
 import com.ruoyi.project.service.impl.ProjectInfoService;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
+@RequestMapping("/project/info")
 @RestController
 @RequiredArgsConstructor
 public class ProjectBasicInfoController {
@@ -15,20 +19,26 @@ public class ProjectBasicInfoController {
      *
      * @author ruoyi
      */
-    @GetMapping("/project/info/getProjectBasicInfo/{id}")
-    public ProjectInfo getProjectInfo(@PathVariable Long id)
+    @GetMapping("/getProjectBasicInfo/{id}")
+    public ProjectInfoRespDTO getProjectInfo(@PathVariable Long id)
     {
         return projectInfoService.selectProjectInfoById(id);
     }
 
-    @GetMapping("/project/info/getProjectBasicInfo/list")
-    public ProjectInfo listProjectInfo(@PathVariable Long id)
+    @PostMapping("getProjectBasicInfoDetail")
+    public ProjectInfoRespDTO getProjectBasicInfoDetail(@RequestBody ProjectInfoReqDTO projectInfoReqDTO)
     {
-        return projectInfoService.selectProjectInfoById(id);
+        return projectInfoService.getProjectBasicInfoDetail(projectInfoReqDTO);
+    }
+
+    @GetMapping("/getProjectBasicInfo/list")
+    public List<ProjectInfo> listProjectInfo()
+    {
+        return projectInfoService.listProjectInfo();
     }
 
 
-    @PostMapping("/project/info/updateProjectBasicInfo/")
+    @PostMapping("/updateProjectBasicInfo")
     public int updateProjectInfo(@RequestBody ProjectInfo projectInfo)
     {
         return projectInfoService.updateProjectInfo(projectInfo);

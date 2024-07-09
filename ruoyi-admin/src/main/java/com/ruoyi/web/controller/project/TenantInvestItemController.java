@@ -113,11 +113,5 @@ public class TenantInvestItemController {
         return new ModelAndView("tenantInvestItem-edit","tenantInvestItem",tenantInvestItem);
     }
 
-    /**
-     * 执行(如不需要请屏蔽)
-     */
-    @PostMapping("/execute")
-    public Object execute(){
-        return AjaxResult.success();
-    }
+
 }

@@ -68,5 +68,10 @@ public class TenantInvestItem implements Serializable {
      */
     private Integer itemValType;
 
+    /**
+     * 元数据对应的表格名称
+     */
+    private String itemTableName;
+
     public TenantInvestItem() {}
 }

@@ -31,15 +31,20 @@ CREATE TABLE `sys_project_info` (
                                     PRIMARY KEY (`id`)
 ) ENGINE = InnoDB AUTO_INCREMENT = 2 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = ' 单位及人员信息表'
 
-) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '项目信息表'
--- Active: 1720405301811@@127.0.0.1@3306@ry-vue
-CREATE TABLE sys_tenant_invest_item (
-                                        id int NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
-                                        tenant_id VARCHAR(32) COMMENT '租户id',
-                                        item_name VARCHAR(128) COMMENT '投入项名称',
-                                        item_type TINYINT(1) COMMENT '投入项类型 0-数字 1-文本',
-                                        setting_type TINYINT(1) COMMENT '设置类型 0-基本配置 1-自定义配置',
-                                        create_time DATETIME COMMENT 'Create Time',
-                                        update_time DATETIME COMMENT 'Update Time',
-                                        delete_time DATETIME COMMENT 'Delete Time'
-) COMMENT '多租户投入明细动态配置表';
+
+CREATE TABLE `sys_project_info` (
+                                    `id` int NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
+                                    `project_type` int DEFAULT NULL COMMENT '项目类型',
+                                    `project_code` varchar(32) DEFAULT NULL COMMENT '项目编号',
+                                    `project_name` varchar(64) DEFAULT NULL COMMENT '项目名称',
+                                    `single_evaluation_cycle` int DEFAULT NULL COMMENT '单批资产评估周期',
+                                    `build_start_time` datetime DEFAULT NULL COMMENT '项目建设开始时间',
+                                    `build_end_time` datetime DEFAULT NULL COMMENT '项目建设结束时间',
+                                    `eval_start_time` datetime DEFAULT NULL COMMENT '项目评估开始时间',
+                                    `eval_end_time` datetime DEFAULT NULL COMMENT '项目评估结束时间',
+                                    `create_time` datetime DEFAULT NULL COMMENT 'Create Time',
+                                    `update_time` datetime DEFAULT NULL COMMENT 'Update Time',
+                                    `delete_time` datetime DEFAULT NULL COMMENT 'Delete Time',
+                                    `project_id` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '项目 id',
+                                    PRIMARY KEY (`id`)
+) ENGINE = InnoDB AUTO_INCREMENT = 2 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = ' 单位及人员信息表'

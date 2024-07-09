@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * @description tenant_invest_item
@@ -23,34 +24,49 @@ public class TenantInvestItem implements Serializable {
     private String tenantId;
 
     /**
-     * 投入项名称
+     * 投入项名称 英文
      */
     private String itemName;
 
     /**
      * 投入项类型 0-数字 1-文本
      */
-    private String itemType;
+    private Integer itemType;
 
     /**
      * 设置类型 0-基本配置 1-自定义配置
      */
-    private String settingType;
+    private Integer settingType;
 
     /**
      * Create Time
      */
-    private String createTime;
+    private Date createTime;
 
     /**
      * Update Time
      */
-    private String updateTime;
+    private Date updateTime;
 
     /**
      * Delete Time
      */
-    private String deleteTime;
+    private Date deleteTime;
+
+    /**
+     * 项目 id
+     */
+    private String projectId;
+
+    /**
+     * 中文描述
+     */
+    private String itemDescription;
+
+    /**
+     * 投入项取值类型 0-文本 1-可选
+     */
+    private Integer itemValType;
 
     public TenantInvestItem() {}
 }

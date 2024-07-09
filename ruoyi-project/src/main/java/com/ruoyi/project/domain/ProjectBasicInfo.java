@@ -18,6 +18,11 @@ public class ProjectBasicInfo implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @TableId(type = IdType.AUTO)
+    private Long Id;
+    /**
+     * 项目 id
+     */
+    private Long projectId;
     /**
      * 填报人
      */

@@ -18,6 +18,12 @@ public class ProjectInfo implements Serializable {
 
     @TableId(type = IdType.AUTO)
     private Long id;
+
+    /**
+     * 项目 id
+     */
+    private Long projectId;
+
     /**
      * 项目类型
      */

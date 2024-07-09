@@ -10,12 +10,13 @@ CREATE TABLE `sys_project_basic_info` (
                                           `create_time` datetime DEFAULT NULL COMMENT 'Create Time',
                                           `update_time` datetime DEFAULT NULL COMMENT 'Update Time',
                                           `delete_time` datetime DEFAULT NULL COMMENT 'Delete Time',
+                                          `project_id` varchar(64) DEFAULT NULL COMMENT '项目 id',
                                           PRIMARY KEY (`id`)
 ) ENGINE = InnoDB AUTO_INCREMENT = 2 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '项目基础信息表'
 
 CREATE TABLE `sys_project_info` (
                                     `id` int NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
-                                    `project_type` bigint DEFAULT NULL COMMENT '项目类型',
+                                    `project_type` int DEFAULT NULL COMMENT '项目类型',
                                     `project_code` varchar(32) DEFAULT NULL COMMENT '项目编号',
                                     `project_name` varchar(64) DEFAULT NULL COMMENT '项目名称',
                                     `single_evaluation_cycle` int DEFAULT NULL COMMENT '单批资产评估周期',
@@ -26,7 +27,10 @@ CREATE TABLE `sys_project_info` (
                                     `create_time` datetime DEFAULT NULL COMMENT 'Create Time',
                                     `update_time` datetime DEFAULT NULL COMMENT 'Update Time',
                                     `delete_time` datetime DEFAULT NULL COMMENT 'Delete Time',
+                                    `project_id` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '项目 id',
                                     PRIMARY KEY (`id`)
+) ENGINE = InnoDB AUTO_INCREMENT = 2 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = ' 单位及人员信息表'
+
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '项目信息表'
 -- Active: 1720405301811@@127.0.0.1@3306@ry-vue
 CREATE TABLE sys_tenant_invest_item (

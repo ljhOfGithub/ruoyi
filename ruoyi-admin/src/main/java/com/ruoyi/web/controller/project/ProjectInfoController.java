@@ -15,11 +15,11 @@ public class ProjectInfoController {
      *
      * @author ruoyi
      */
-    @GetMapping("/project/info/getProjectInfo/{id}")
-    public ProjectInfo getProjectInfo(@PathVariable Long id)
-    {
-        return projectInfoService.selectProjectInfoById(id);
-    }
+//    @GetMapping("/project/info/getProjectInfo/{id}")
+//    public ProjectInfo getProjectInfo(@PathVariable Long id)
+//    {
+//        return projectInfoService.selectProjectInfoById(id);
+//    }
 
     @PostMapping("/project/info/updateProjectInfo/")
     public int updateProjectInfo(@RequestBody ProjectInfo projectInfo)

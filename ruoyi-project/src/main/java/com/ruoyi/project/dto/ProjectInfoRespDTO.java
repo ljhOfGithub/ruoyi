@@ -5,18 +5,20 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 @Builder
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class ProjectInfoRespDTO {
-    private String id;
+    private Long id;
     private String project_type;
     private String project_code;
     private String project_name;
     private String single_evaluation_cycle;
-    private String build_start_time;
-    private String build_end_time;
-    private String eval_start_time;
-    private String eval_end_time;
+    private Date build_start_time;
+    private Date build_end_time;
+    private Date eval_start_time;
+    private Date eval_end_time;
 }

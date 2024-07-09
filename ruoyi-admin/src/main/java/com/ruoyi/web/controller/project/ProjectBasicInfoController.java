@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RequestMapping("/project/info")
+@RequestMapping("/project/basicInfo")
 @RestController
 @RequiredArgsConstructor
 public class ProjectBasicInfoController {
@@ -31,7 +31,7 @@ public class ProjectBasicInfoController {
         return projectInfoService.getProjectBasicInfoDetail(projectInfoReqDTO);
     }
 
-    @GetMapping("/getProjectBasicInfo/list")
+    @GetMapping("/listProjectBasicInfo")
     public List<ProjectInfo> listProjectInfo()
     {
         return projectInfoService.listProjectInfo();
@@ -43,6 +43,7 @@ public class ProjectBasicInfoController {
     {
         return projectInfoService.updateProjectInfo(projectInfo);
     }
+
 
 
 }

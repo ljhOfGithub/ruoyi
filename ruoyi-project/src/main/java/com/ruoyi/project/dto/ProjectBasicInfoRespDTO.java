@@ -10,8 +10,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ProjectInfoBasicRespDTO {
-    private String id;
+public class ProjectBasicInfoRespDTO {
+    private Long id;
     private String reporter_name;
     private String reporter_phone;
     private String firm_name;

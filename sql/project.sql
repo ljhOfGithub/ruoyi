@@ -28,3 +28,14 @@ CREATE TABLE `sys_project_info` (
                                     `delete_time` datetime DEFAULT NULL COMMENT 'Delete Time',
                                     PRIMARY KEY (`id`)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '项目信息表'
+-- Active: 1720405301811@@127.0.0.1@3306@ry-vue
+CREATE TABLE sys_tenant_invest_item (
+                                        id int NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Primary Key',
+                                        tenant_id VARCHAR(32) COMMENT '租户id',
+                                        item_name VARCHAR(128) COMMENT '投入项名称',
+                                        item_type TINYINT(1) COMMENT '投入项类型 0-数字 1-文本',
+                                        setting_type TINYINT(1) COMMENT '设置类型 0-基本配置 1-自定义配置',
+                                        create_time DATETIME COMMENT 'Create Time',
+                                        update_time DATETIME COMMENT 'Update Time',
+                                        delete_time DATETIME COMMENT 'Delete Time'
+) COMMENT '多租户投入明细动态配置表';

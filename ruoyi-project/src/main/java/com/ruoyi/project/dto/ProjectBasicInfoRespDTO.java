@@ -12,11 +12,38 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ProjectBasicInfoRespDTO {
     private Long id;
-    private String reporter_name;
-    private String reporter_phone;
-    private String firm_name;
-    private String subordinate_name;
+    /**
+     * 填报人
+     */
+    private String reporterName;
+
+    /**
+     * 填报人联系方式
+     */
+    private String reporterPhone;
+
+    /**
+     * 填报人公司
+     */
+    private String firmName;
+
+    /**
+     * 下属单位名称
+     */
+    private String subordinateName;
+
+    /**
+     * 责任人
+     */
     private String officer;
-    private String officer_phone;
-    private String officer_firm_name;
+
+    /**
+     * 责任人联系方式
+     */
+    private String officerPhone;
+
+    /**
+     * 责任人单位名称
+     */
+    private String officerFirmName;
 }

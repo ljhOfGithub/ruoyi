@@ -14,13 +14,44 @@ import java.util.Date;
 @NoArgsConstructor
 public class ProjectInfoReqDTO {
     private Long id;
-    private String project_type;
-    private String project_code;
-    private String project_name;
-    private String single_evaluation_cycle;
-    private Date build_start_time;
-    private Date build_end_time;
-    private Date eval_start_time;
-    private Date eval_end_time;
+    /**
+     * 项目类型
+     */
+    private Long projectType;
+
+    /**
+     * 项目编号
+     */
+    private String projectCode;
+
+    /**
+     * 项目名称
+     */
+    private String projectName;
+
+    /**
+     * 单批资产评估周期
+     */
+    private Integer singleEvaluationCycle;
+
+    /**
+     * 项目建设开始时间
+     */
+    private Date buildStartTime;
+
+    /**
+     * 项目建设结束时间
+     */
+    private Date buildEndTime;
+
+    /**
+     * 项目评估开始时间
+     */
+    private Date evalStartTime;
+
+    /**
+     * 项目评估结束时间
+     */
+    private Date evalEndTime;
 
 }

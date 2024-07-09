@@ -26,9 +26,9 @@ public class ProjectInfoService implements IProjectInfoService {
         ProjectInfo projectInfo = projectInfoMapper.selectOne(lambdaQueryWrapper);
         return ProjectInfoRespDTO
                 .builder()
-                .project_code(projectInfo.getProject_code())
-                .project_type(projectInfo.getProject_type())
-                .project_name(projectInfo.getProject_name())
+                .projectCode(projectInfo.getProjectCode())
+                .projectType(projectInfo.getProjectType())
+                .projectName(projectInfo.getProjectName())
                 .build();
     }
 
@@ -47,7 +47,7 @@ public class ProjectInfoService implements IProjectInfoService {
     public int updateProjectInfo(ProjectInfo newProjectInfo) {
         LambdaUpdateWrapper<ProjectInfo> lambdaUpdateWrapper = Wrappers.lambdaUpdate(ProjectInfo.class)
                 .eq(ProjectInfo::getId, newProjectInfo.getId())
-                .eq(ProjectInfo::getProject_code, newProjectInfo.getProject_code());
+                .eq(ProjectInfo::getProjectCode, newProjectInfo.getProjectCode());
         ProjectInfo projectInfo = new ProjectInfo();
         return projectInfoMapper.update(projectInfo, lambdaUpdateWrapper);
     }

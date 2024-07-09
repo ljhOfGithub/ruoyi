@@ -1,13 +1,8 @@
 package com.ruoyi.project.service.impl;
 
 import com.ruoyi.project.domain.ProjectBasicInfo;
-import com.ruoyi.project.domain.ProjectInfo;
 import com.ruoyi.project.mapper.ProjectBasicInfoMapper;
-import com.ruoyi.project.mapper.ProjectInfoMapper;
 import com.ruoyi.project.service.IProjectBasicInfoService;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -29,8 +29,7 @@ public class ReportContext {
     /**
      * 分组值，最多5个
      */
-    List<String>
-            groupValues;
+    List<String>groupValues;
 
     /**
      * 分组辅助信息map，key为变量名称，

@@ -3,10 +3,13 @@ package com.ruoyi.project.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.ruoyi.project.domain.ProjectInfo;
+import com.ruoyi.project.domain.TenantInvestItem;
 import com.ruoyi.project.dto.ProjectInfoReqDTO;
 import com.ruoyi.project.dto.ProjectInfoRespDTO;
 import com.ruoyi.project.mapper.ProjectInfoMapper;
+import com.ruoyi.project.mapper.TenantInvestItemMapper;
 import com.ruoyi.project.service.IProjectInfoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -15,7 +18,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class ProjectInfoService implements IProjectInfoService {
+public class ProjectInfoServiceImpl extends ServiceImpl<ProjectInfoMapper, ProjectInfo> implements IProjectInfoService {
 
     private final ProjectInfoMapper projectInfoMapper;
 

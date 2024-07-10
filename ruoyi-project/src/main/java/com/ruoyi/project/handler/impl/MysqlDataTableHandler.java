@@ -24,13 +24,10 @@ import java.sql.*;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class MysqlDataTableHandler {
-}
-
 @Slf4j
 @Service
 @ConditionalOnProperty(value = "spring.monitordata.datasource.type", havingValue = "mysql")
-public class MysqlModelDataTableHandler implements SettingTableHandler {
+public class MysqlDataTableHandler implements SettingTableHandler {
 
     @Resource
     @Qualifier("monitorDataDS")

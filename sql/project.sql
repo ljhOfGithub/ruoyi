@@ -48,3 +48,28 @@ CREATE TABLE `sys_project_info` (
                                     `project_id` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '项目 id',
                                     PRIMARY KEY (`id`)
 ) ENGINE = InnoDB AUTO_INCREMENT = 2 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = ' 单位及人员信息表'
+
+CREATE TABLE `sys_page_info` (
+                                 `id` int NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
+                                 `page_id` varchar(32) DEFAULT NULL COMMENT '页面 id',
+                                 `page_name` varchar(128) DEFAULT NULL COMMENT '页面中文名',
+                                 `page_code` varchar(128) DEFAULT NULL COMMENT '页面英文名',
+                                 `create_time` datetime DEFAULT NULL COMMENT 'Create Time',
+                                 `update_time` datetime DEFAULT NULL COMMENT 'Update Time',
+                                 `delete_time` datetime DEFAULT NULL COMMENT 'Delete Time',
+                                 PRIMARY KEY (`id`)
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '页面信息'
+
+CREATE TABLE `sys_page_setting_table` (
+                                          `id` int NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
+                                          `page_id` varchar(32) DEFAULT NULL COMMENT '页面 id',
+                                          `page_name` varchar(128) DEFAULT NULL COMMENT '页面中文名',
+                                          `page_code` varchar(128) DEFAULT NULL COMMENT '页面英文名',
+                                          `setting_table_id` varchar(128) DEFAULT NULL COMMENT '表格 id',
+                                          `setting_table_name` varchar(128) DEFAULT NULL COMMENT '表格 中文名',
+                                          `setting_table_code` varchar(128) DEFAULT NULL COMMENT '表格 英文名',
+                                          `create_time` datetime DEFAULT NULL COMMENT 'Create Time',
+                                          `update_time` datetime DEFAULT NULL COMMENT 'Update Time',
+                                          `delete_time` datetime DEFAULT NULL COMMENT 'Delete Time',
+                                          PRIMARY KEY (`id`)
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '页面和动态表格对应关系'

@@ -1,8 +1,7 @@
 package com.ruoyi.project.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.ruoyi.common.core.domain.AjaxResult;
-import com.ruoyi.project.domain.TenantInvestItem;
+import com.ruoyi.project.entity.TenantInvestItem;
 import com.ruoyi.project.dto.CreateTabDTO;
 import com.ruoyi.project.mapper.TenantInvestItemMapper;
 import com.ruoyi.project.service.ITenantInvestItemService;

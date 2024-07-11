@@ -1,10 +1,10 @@
 package com.ruoyi.project.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.ruoyi.project.domain.TenantInvestItem;
+import com.ruoyi.project.entity.TenantInvestItem;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
-import com.ruoyi.project.domain.TenantInvestItem;
+
 import java.util.List;
 /**
  * @description tenant_invest_itemMapper

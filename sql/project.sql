@@ -73,3 +73,29 @@ CREATE TABLE `sys_page_setting_table` (
                                           `delete_time` datetime DEFAULT NULL COMMENT 'Delete Time',
                                           PRIMARY KEY (`id`)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '页面和动态表格对应关系'
+
+CREATE TABLE `sys_setting_table` (
+                                     `id` int NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
+                                     `setting_table_id` varchar(32) DEFAULT NULL COMMENT '表格 id',
+                                     `setting_table_name` varchar(128) DEFAULT NULL COMMENT '表格中文名',
+                                     `setting_table_code` varchar(128) DEFAULT NULL COMMENT '表格英文名',
+                                     `create_time` datetime DEFAULT NULL COMMENT 'Create Time',
+                                     `update_time` datetime DEFAULT NULL COMMENT 'Update Time',
+                                     `delete_time` datetime DEFAULT NULL COMMENT 'Delete Time',
+                                     PRIMARY KEY (`id`)
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '动态表格'
+
+CREATE TABLE `sys_setting_table_column` (
+                                            `id` int NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
+                                            `setting_table_id` varchar(32) DEFAULT NULL COMMENT '表格 id',
+                                            `setting_table_name` varchar(128) DEFAULT NULL COMMENT '表格中文名',
+                                            `setting_table_code` varchar(128) DEFAULT NULL COMMENT '表格英文名',
+                                            `table_column_id` varchar(32) DEFAULT NULL COMMENT '表格列 id',
+                                            `table_column_name` varchar(128) DEFAULT NULL COMMENT '表格列中文名',
+                                            `table_column_code` varchar(128) DEFAULT NULL COMMENT '表格列英文名',
+                                            `func` tinyint(1) DEFAULT NULL COMMENT '表格列函数 0-无函数 1-求和 2-百分数',
+                                            `create_time` datetime DEFAULT NULL COMMENT 'Create Time',
+                                            `update_time` datetime DEFAULT NULL COMMENT 'Update Time',
+                                            `delete_time` datetime DEFAULT NULL COMMENT 'Delete Time',
+                                            PRIMARY KEY (`id`)
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '表格列'

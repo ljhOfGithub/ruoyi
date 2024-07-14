@@ -1,6 +1,6 @@
 package com.ruoyi.web.controller.project;
 
-import com.ruoyi.project.domain.ProjectInfo;
+import com.ruoyi.project.entity.ProjectInfo;
 import com.ruoyi.project.dto.ProjectInfoReqDTO;
 import com.ruoyi.project.dto.ProjectInfoRespDTO;
 

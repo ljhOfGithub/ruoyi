@@ -1,8 +1,8 @@
 package com.ruoyi.web.controller.project;
 
-import com.ruoyi.project.domain.ProjectInfo;
+import com.ruoyi.project.entity.ProjectInfo;
 import com.ruoyi.project.dto.ProjectInfoRespDTO;
-import com.ruoyi.project.service.impl.ProjectInfoService;
+import com.ruoyi.project.service.IProjectInfoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 @RequestMapping("/project/info")
 public class ProjectInfoController {
-    private final ProjectInfoService projectInfoService;
+    private final IProjectInfoService projectInfoService;
 
     /**
      * 获取项目信息

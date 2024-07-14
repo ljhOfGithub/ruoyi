@@ -1,7 +1,7 @@
 package com.ruoyi.web.controller.project;
 
 import com.ruoyi.common.core.domain.AjaxResult;
-import com.ruoyi.project.domain.TenantInvestItem;
+import com.ruoyi.project.entity.TenantInvestItem;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
